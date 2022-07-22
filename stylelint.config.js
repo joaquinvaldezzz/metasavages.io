@@ -10,5 +10,6 @@ module.exports = {
     'order/properties-alphabetical-order': null,
     'order/properties-order': [...postcssSorting.propertiesOrder],
     'prettier/prettier': true,
+    'selector-id-pattern': null,
   },
 }

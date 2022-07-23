@@ -144,8 +144,6 @@ module.exports = {
     'word-spacing',
     'overflow-wrap',
     'tab-size',
-    '-webkit-font-smoothing',
-    '-moz-osx-font-smoothing',
     'hyphens',
     'unicode-bidi',
     'columns',

@@ -1,0 +1,74 @@
+.section-one,
+.section-two,
+.section-three,
+.section-four,
+.section-five {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.5px;
+    left: 0;
+    content: '';
+    height: 6rem;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.section-one {
+  padding-bottom: 4rem;
+
+  &::after {
+    background-color: #fff;
+  }
+}
+
+.section-two,
+.section-four {
+  padding-bottom: 6rem !important;
+
+  &::after {
+    background-color: #000;
+  }
+}
+
+.section-three {
+  padding-bottom: 6rem !important;
+
+  &::after {
+    background-color: #e5e5e5;
+  }
+}
+
+.section-five,
+.section-six,
+.section-nine {
+  position: relative;
+  padding-bottom: 6rem;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.section-five {
+  z-index: 1;
+}
+
+.section-six {
+  z-index: 2;
+}
+
+.section-seven {
+  z-index: 3;
+}
+
+.section-nine {
+  z-index: 4;
+}
+
+.section-six,
+.section-seven,
+.section-ten {
+  margin-top: -8rem;
+  padding-top: 8rem;
+}

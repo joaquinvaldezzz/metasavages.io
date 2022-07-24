@@ -7,6 +7,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: { index: './index.html' },
+      output: {
+        assetFileNames: '[name].[ext]',
+        chunkFileNames: '[name].js',
+        entryFileNames: '[name].js',
+      },
     },
   },
 })

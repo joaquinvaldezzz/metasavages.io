@@ -7,13 +7,13 @@ This project uses [Vite](https://vitejs.dev) for its development environment and
 1. Download or clone the project
 
    ```sh
-   git clone https://github.com/joaquinvaldezzz/meta-savages.git
+   git clone https://github.com/joaquinvaldezzz/metasavages.io.git
    ```
 
 2. Go to the project directory
 
    ```sh
-   cd meta-savages
+   cd metasavages.io
    ```
 
 3. Install dependencies

@@ -3,624 +3,82 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <title>Metasavages</title>
   </head>
 
   <body>
-    <div id="alertSuccess" class="alert" style="display: none">Thank you for subscribing!</div>
-    <div id="alertFail" class="alert" style="display: none">Invalid email!</div>
-    <section class="section-one" id="section1">
-      <video id="section1video" src="/images/Hero_Video1.m4v" class="background-video" autoplay loop muted playsinline></video>
-      <div id="main">
-        <div id="img">
-          <a id="mainLogo" href="#">
-            <img src="/images/logo-2.png" />
+    <div aria-label="Alerts">
+      <div class="alert alert-success" id="alertSuccess">Thank you for subscribing!</div>
+      <div class="alert alert-fail" id="alertFail">Invalid e-mail!</div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header-row">
+          <a class="header-row-logo" href="/">
+            <span class="sr-only">Home</span>
+            <svg fill="none" viewBox="0 0 40 48">
+              <path fill="currentColor" fill-rule="evenodd" d="M30.91 13.787v.013l.006-.006-.006-.007Zm-.259-1.049a2.4 2.4 0 0 1 .26 1.05c-2.4-2.716-3.646-3.168-4.004-3.298a.725.725 0 0 1-.094-.038 8.185 8.185 0 0 0-2.71-1.11c-.155-.06-.299-.06-.426-.06h-.276c1.29.438.351.312-1.182 0l-.094-.02c-.148-.03-.307-.064-.482-.094-.317-.06-.657-.102-1.003-.138l2.063 8.022c.582 2.19.997 3.708 1.234 4.536l.127-.022c.317-.055.56-.097.703-.134h.063a290.22 290.22 0 0 0 4.288-.534l.997-.126a11.605 11.605 0 0 0-.455-2.352c-.04-.12-.08-.264-.121-.42a13.006 13.006 0 0 0-.72-2.076 8.364 8.364 0 0 1-.098-.243 3.794 3.794 0 0 0-.087-.213c-.04-.084-.807-1.704-.847-1.8l-.974-1.362 1.861 1.266-.697-1.158 1.1 1.2c.075.101.238.365.388.606.108.175.209.337.264.42l.115.192c.058.096.116.192.168.288a.463.463 0 0 1 .109.054v-.444l.611.39.507 1.2a.668.668 0 0 1 .288-.174.733.733 0 0 1 .779.45c.239.445.432.916.576 1.404a8.1 8.1 0 0 1 .386 1.548h.156c.06.25.104.505.148.755l.007.043c1.05-.12 2.104-.234 3.164-.324L40 19.74l-2.15 1.044a.651.651 0 0 1-.386.666 2.29 2.29 0 0 1-.853.15c-.285 0-.57.018-.853.054-1.25.33-1.355.678-1.355.678-.069.288-.259.426-.61.516v.96a13.949 13.949 0 0 1-.421 2.538 14.698 14.698 0 0 1-.986 2.688 14.536 14.536 0 0 1-3.458 4.596l-.3.258-.144.12c-.443.358-.905.69-1.383.996.116.507.233 1.029.356 1.575.344 1.524.73 3.237 1.235 5.343l.098.42-.121.084a5.18 5.18 0 0 1-.121-.33c-.108-.304-.248-.7-.248-.66.017.154.058.397.108.697v.001c.154.908.393 2.33.324 3.34-.011.126-1.885-4.998-2.058-5.598A15.183 15.183 0 0 0 25.36 36.6l-.08.024-.727.9-.276-1.14-.577.216c-.764.236-1.544.413-2.334.528a14.275 14.275 0 0 1-5.32-.246 16.847 16.847 0 0 1-.784-.216 2616.29 2616.29 0 0 1-.738 3.42 16.218 16.218 0 0 1-.478 1.608 19.11 19.11 0 0 0-.115.37c-.073.24-.148.489-.23.704-.128.33-.237.588-.34.816L11.284 48l.242-1.2-.178.264.501-2.4.167-1.008c.055-.328.135-.682.216-1.044l.015-.066a.754.754 0 0 1-.08-.246l-.64.792.466-2.214a.555.555 0 0 1-.374 0 .772.772 0 0 1-.173-.078l-.761 2.4.697-6.318.112-.995c.035-.298.069-.596.102-.895a12.335 12.335 0 0 1-.732-.504A15.106 15.106 0 0 1 7.02 30.33a16.302 16.302 0 0 1-1.153-2.214H5.58c-.208 0-5.58.792-5.58.792l2.542-1.584-1.424.534 1.435-.9-.64-.054c.105-.018.211-.03.318-.036.034-.042.443-.306.484-.306l-.848-.27 1.51-.492a9.813 9.813 0 0 0-1.584-.36l3.06-.786a17.023 17.023 0 0 1-.242-3.114c.02-.772.089-1.542.207-2.304v-.126a15.643 15.643 0 0 1 3.718-7.668c.083-.1.18-.201.28-.305l.077-.079.121-.126.254-.252.161-.15.105-.097c.167-.155.336-.311.512-.455.527-.438 1.081-.84 1.66-1.2a15.66 15.66 0 0 1 1.821-.978 14.856 14.856 0 0 1 1.949-.708 14.436 14.436 0 0 1 1.51-.33L18.323 0l1.689 6.6a14.308 14.308 0 0 1 5.492 1.338 15.6 15.6 0 0 1 1.816 1.026c1.112.751 2.69 2.747 2.95 3.075l.035.045c.047.054.294.546.346.654ZM19.021 18l-.243 1.38-.697 2.676.029.042v.3l2.132-.27L19.02 18Zm-6.773 12.684-.046-.042a11.45 11.45 0 0 1-2.456-2.874l2.306-.234.542-.06c.098-.056.2-.104.305-.144a94.748 94.748 0 0 0-.651 3.354Zm1.522-7.758c.265-1.278.599-2.934.997-4.926l1.533-7.722h-.104l-.26.072-.622.21-.265.102a5.212 5.212 0 0 0-.42.174l-.692.336a10.198 10.198 0 0 0-2.346 1.674 9.945 9.945 0 0 0-1.517 1.887l-.097.153-.138.234c-.133.234-.26.462-.375.702a12.23 12.23 0 0 0-1.245 7.818c1.21-.246 2.605-.408 3.412-.486l.225-.03a79.67 79.67 0 0 0 1.914-.198Zm7.4 10.128a9.974 9.974 0 0 1-2.478.162 10.483 10.483 0 0 1-2.45-.408l-.155-.048c.432-2.064.841-4.032 1.227-5.934.046 0 3.539-.672 4.11-.792l.317 1.056c.06.185.122.37.184.554.338 1.015.676 2.03.968 3.046.162.6.323 1.2.485 1.866-.717.247-1.457.414-2.208.498Zm5.274-2.634a11.404 11.404 0 0 0 3.32-5.478c.063-.234.115-.462.167-.696l-.155.015c-.366.036-.72.071-1.038.129-.482.094-1.014.253-1.53.406l-.026.008-2.306.498c.507 2.1.893 3.798 1.25 5.4l.318-.282Z" clip-rule="evenodd" />
+            </svg>
           </a>
-        </div>
-        <div id="navigator">
-          <nav id="navBtns" role="navigation" aria-hidden="true" style="width: 1887px; left: 0px; top: 44px">
-            <ul>
-              <li><a href="#section4" tabindex="-1">Tribe Goals</a></li>
-              <li><a href="#section5" tabindex="-1">NFT</a></li>
-              <li><a href="#section6" tabindex="-1">Character List</a></li>
-              <li><a href="#section8" tabindex="-1">Metaverse</a></li>
-              <li><a href="#section10">Roadmap</a></li>
-              <li><a href="#section7">Artist</a></li>
-              <li><a href="#artist">FAQ</a></li>
-            </ul>
+
+          <nav class="header-row-nav">
+            <a href="#">Tribe Goals</a>
+            <a href="#">NFT</a>
+            <a href="#">Character List</a>
+            <a href="#">Metaverse</a>
+            <a href="#">Roadmap</a>
+            <a href="#">Artist</a>
+            <a href="#">FAQs</a>
           </nav>
-          <div id="topNav">
-            <a href="javascript:void(0);" class="icon">
-              <i id="openMenu" onclick="openMenuFunc()" class="fa fa-bars"></i>
-              <i id="closeMenu" onclick="closeMenuFunc()" class="fa fa-window-close"></i>
+
+          <div class="header-row-social">
+            <a href="#" target="_blank">
+              <span class="sr-only">Visit Discord</span>
+              <span class="fab fa-discord"></span>
+            </a>
+
+            <a href="#" target="_blank">
+              <span class="sr-only">Message via Telegram</span>
+              <span class="fab fa-telegram"></span>
+            </a>
+
+            <a href="#" target="_blank">
+              <span class="sr-only">Visit Twitter</span>
+              <span class="fab fa-twitter"></span>
+            </a>
+
+            <a href="#" target="_blank">
+              <span class="sr-only">Visit Instagram</span>
+              <span class="fab fa-instagram"></span>
             </a>
           </div>
-          <nav id="mobileNav" role="navigation" aria-hidden="false" style="top: 33px; width: 963px; left: -153.766px">
-            <ul id="menu-2-179c80d" class="elementor-nav-menu" data-smartmenus-id="16538203466244763">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-400"><a href="#section4" onclick="closeMenuFunc()" class="elementor-item elementor-item-anchor" tabindex="0">Tribe Goals</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-409"><a href="#section5" class="elementor-item elementor-item-anchor" onclick="closeMenuFunc()" tabindex="0">NFT</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-410"><a href="#section6" onclick="closeMenuFunc()" class="elementor-item elementor-item-anchor" tabindex="0">Character List</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417"><a href="#section8" onclick="closeMenuFunc()" class="elementor-item elementor-item-anchor" tabindex="0">Metaverse</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-426"><a href="#section10" onclick="closeMenuFunc()" class="elementor-item elementor-item-anchor" tabindex="0">Roadmap</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-427"><a href="#section7" onclick="closeMenuFunc()" class="elementor-item elementor-item-anchor" tabindex="0">Artist</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-551"><a href="#" class="elementor-item elementor-item-anchor" tabindex="0">FAQ</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div id="links">
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-d4a121b" href="https://discord.gg/QvgQXbBS" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.04 53.25">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M12.73,40.72a5.75,5.75,0,0,0,1.5,1.92,21.68,21.68,0,0,0,7.83,4.86l1.23.45c.05,0,.08.07.18.15-.43.54-.85,1.08-1.28,1.61-.8,1-1.62,2-2.42,3a1.09,1.09,0,0,1-1,.52,44.14,44.14,0,0,1-5.36-.8A23.21,23.21,0,0,1,1.93,46c-.21-.22-.41-.44-.6-.68C-.26,43.37,0,44,.06,41.4c.05-1.54.14-3.08.31-4.6.23-2.07.48-4.14.84-6.19a89.28,89.28,0,0,1,3.73-14.1A85.08,85.08,0,0,1,8.78,7.36a3,3,0,0,1,1-1.17A33.87,33.87,0,0,1,22.36.58C23.67.32,25,.2,26.34,0a1,1,0,0,1,1.08.71C26.17,1.14,25,1.54,23.76,2A44.17,44.17,0,0,0,12,8.12a5.18,5.18,0,0,0-.63.61l-.13,0,.07.08.07-.12a8.88,8.88,0,0,0,.9-.36A50,50,0,0,1,24.38,4c1.79-.41,3.62-.63,5.44-.86a55.25,55.25,0,0,1,7.71-.49,55,55,0,0,1,7.13.58,51.52,51.52,0,0,1,9,2.16A52.41,52.41,0,0,1,60.54,8.3l1,.45s.1.06,0,0h-.07a3.71,3.71,0,0,0-.55-.63A41,41,0,0,0,51.79,3c-1.66-.69-3.39-1.25-5.08-1.87A1.92,1.92,0,0,1,46.42,1c.56-1,.69-1,1.74-.93A32,32,0,0,1,58.79,3a38.37,38.37,0,0,1,5.6,3.29,3.1,3.1,0,0,1,.94,1.21A81.56,81.56,0,0,1,70.25,19.9a83.38,83.38,0,0,1,2.6,10.67,57.11,57.11,0,0,1,.89,7.26c.09,1.7.19,3.4.29,5.09a2,2,0,0,1-.45,1.37,21.52,21.52,0,0,1-7.88,6.34,25.52,25.52,0,0,1-7.34,2.26c-1,.17-2.07.23-3.1.34a.89.89,0,0,1-.88-.32c-1.19-1.5-2.4-3-3.61-4.49,0-.06-.07-.14-.14-.28a26.34,26.34,0,0,0,6.19-2.79,19.32,19.32,0,0,0,5.06-4.6c-.19,0-.29,0-.36.09a45.93,45.93,0,0,1-10.66,4.83,38.09,38.09,0,0,1-9.15,1.83c-1.48.11-3,.27-4.43.25a48.69,48.69,0,0,1-7.53-.69,49.12,49.12,0,0,1-12-3.71c-1.54-.71-3-1.59-4.49-2.39a4.61,4.61,0,0,0-.51-.22l-.05,0Zm19-10.25a5.88,5.88,0,0,0-2.59-5.57,6.33,6.33,0,0,0-9.27,1.72,7.51,7.51,0,0,0,.43,8.69A6.07,6.07,0,0,0,25,37.75a6.16,6.16,0,0,0,5.63-3.24A7.34,7.34,0,0,0,31.7,30.47Zm10.14.22a7.37,7.37,0,0,0,1.65,4.71,6.16,6.16,0,0,0,9.65.05,7.65,7.65,0,0,0,.47-8.91A6.21,6.21,0,0,0,44.44,25,7,7,0,0,0,41.84,30.69Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-01cfbb3" href="#" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.24 56.39">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M25.4,53c0-.8,0-1.5,0-2.19.16-2.61.34-5.23.52-7.84.11-1.71.24-3.42.33-5.14a1.39,1.39,0,0,1,.54-1c2.69-2.41,5.37-4.84,8.05-7.26l9.8-8.82,9.94-8.95c.36-.32.78-.61.85-1.17a.92.92,0,0,0-1.16-.35,7.72,7.72,0,0,0-1.58.71c-4.46,2.8-8.9,5.62-13.36,8.43L18.23,32.69l-.56.33-7-2.23c-2.77-.87-5.54-1.74-8.3-2.64a5.81,5.81,0,0,1-1.5-.68,1.53,1.53,0,0,1-.26-2.58,6,6,0,0,1,2.18-1.42c1-.42,2-.8,3-1.19q28.5-11,57-22A5,5,0,0,1,64.27,0,2.67,2.67,0,0,1,67,1.83a5.37,5.37,0,0,1,.11,3.1C65.54,12.14,64,19.35,62.45,26.56,61.2,32.46,60,38.38,58.71,44.28q-.93,4.44-1.9,8.86a7.52,7.52,0,0,1-.51,1.47,2.79,2.79,0,0,1-3.7,1.58,6.54,6.54,0,0,1-1.77-.89Q43.54,50,36.28,44.57l-.46-.33-.58.53L28.1,51.71A4.08,4.08,0,0,1,26,52.92,4,4,0,0,1,25.4,53Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-87158c4" href="https://twitter.com/metasavagesnft" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.95 62.12">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M0,55.26a32.35,32.35,0,0,0,22.82-6.6c-.8-.1-1.47-.17-2.14-.27a15.42,15.42,0,0,1-9.44-5.31,14.67,14.67,0,0,1-2.75-4.69c-.08-.2-.14-.4-.22-.66a16.31,16.31,0,0,0,6.78-.23c-1.14-.43-2.24-.82-3.3-1.27a12.66,12.66,0,0,1-3.06-1.88,15.91,15.91,0,0,1-2.5-2.49,15.12,15.12,0,0,1-1.88-3,15.66,15.66,0,0,1-1.18-3.39A12.85,12.85,0,0,1,2.79,22c1.13.43,2.22.9,3.35,1.25a13.27,13.27,0,0,0,3.63.57A15.68,15.68,0,0,1,2.93,11.93,15.18,15.18,0,0,1,5,2.92,44.9,44.9,0,0,0,37.25,19.3c-.07-.57-.14-1-.2-1.51a15.23,15.23,0,0,1,1.58-9.24A15.68,15.68,0,0,1,63.47,4.41a4.42,4.42,0,0,1,.44.55A31.38,31.38,0,0,0,74,1.17a15.19,15.19,0,0,1-2.58,4.88,17.61,17.61,0,0,1-4,3.68A29.48,29.48,0,0,0,76,7.43a29.61,29.61,0,0,1-7.65,8c0,.28,0,.58,0,.89A39.28,39.28,0,0,1,68,22.48,45.6,45.6,0,0,1,65,34.3,44.93,44.93,0,0,1,52.25,52.07,41.49,41.49,0,0,1,35.06,60.8a40.51,40.51,0,0,1-8,1.2c-1.86.08-3.74.17-5.6.08A43.64,43.64,0,0,1,5.9,58.43,44.23,44.23,0,0,1,.53,55.62C.35,55.51.18,55.38,0,55.26Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-83d92d6" href="https://instagram.com/meta.savages.nft?utm_medium=copy_link" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.13 63.13">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M31.61,19.43A12.15,12.15,0,1,0,43.7,31.64,12.07,12.07,0,0,0,31.61,19.43Z"></path>
-                    <path class="cls-1" d="M63.12,17.47a19.93,19.93,0,0,0-.19-2.57,16.84,16.84,0,0,0-2.06-6.05A17.35,17.35,0,0,0,54.8,2.56,17.07,17.07,0,0,0,45.68,0H17.82a19.68,19.68,0,0,0-3.25.25A17.38,17.38,0,0,0,1.47,10.42,17,17,0,0,0,0,17.33Q0,31.55,0,45.77A17.29,17.29,0,0,0,.2,48.26a16.87,16.87,0,0,0,2.07,6,17.24,17.24,0,0,0,6,6.25,17,17,0,0,0,9.12,2.57q13.63,0,27.27,0c.66,0,1.32,0,2,0A15.47,15.47,0,0,0,50,62.59a17.11,17.11,0,0,0,7.62-4.17,17.38,17.38,0,0,0,5.5-12.69c0-4.72,0-9.43,0-14.15S63.13,22.17,63.12,17.47ZM31.54,48.38A16.82,16.82,0,1,1,48.38,31.61,16.84,16.84,0,0,1,31.54,48.38ZM49.06,17.33a3.27,3.27,0,0,1-3.25-3.28,3.26,3.26,0,1,1,6.52,0A3.28,3.28,0,0,1,49.06,17.33Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
+
+          <button class="header-mobile-button" type="button">
+            <span class="sr-only">Open mobile menu</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
-      <img id="logo1" width="1296" height="700" src="../Images/logo-1.png" />
-      <div id="s1additionalText">
-        <p><span style="font-weight: 400">Being a Meta Savage does not make you primitive, it makes you someone who won’t bend by the rules inflicted by banks, governments, and all other organizations trying to stop the progress of the decentralized revolution. We are here to build a new future, using everything that WEB 3.0 has to offer.&nbsp;</span></p>
-      </div>
-      <h2 id="header2">JOIN OUR COMMUNITY</h2>
-      <div id="btns">
-        <a id="joinDiscordBtn" href="https://discord.gg/QvgQXbBS" target="_blank">
-          <span class="elementor-button-content-wrapper">
-            <span id="btnText">Join Our Discord</span>
-          </span>
-        </a>
+    </header>
 
-        <a id="joinMetaverseBtn" href="https://withkoji.com/@MetaSavagesNFT" target="_blank">
-          <span class="elementor-button-content-wrapper">
-            <span class="elementor-button-text">Join Our Metaverse</span>
-          </span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section-two" id="section2">
-      <div id="container2">
-        <h2 id="section2Title" class="bloodTitle">ALL YOU NEED TO KNOW</h2>
-        <h2>THE VISION</h2>
-        <p>"A man who I deeply respect once told me that the best way to achieve what you want in life is by helping the people around you achieve what they want! Ever since I heard it, it's like it got tattooed on my brain, this is why I want this to be the totem pole around which everything in our Meta Tribe evolves. We want to build a community of givers, meaning people who not only enjoy learning but also share everything that's currently working out for them and love putting in the time to help others achieve success."</p>
-        <iframe class="elementor-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/i19xj8gICbs?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fmetasavages.io&amp;widgetid=1" id="widget2"></iframe>
-        <h2 class="elementor-heading-title elementor-size-default">LATEST NEWS FROM OUR</h2>
-        <h2 id="section2Podcast" class="bloodTitle">PODCAST</h2>
-        <div id="section2Cards">
-          <div class="s2Card" data-id="a40bd51" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-element elementor-element-9230df7 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="9230df7" data-element_type="widget" data-widget_type="image-box.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img"><img width="2300" height="1200" src="../Images/podcast1Img.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-                    <div class="elementor-image-box-content">
-                      <h3 class="elementor-image-box-title">Who are we?</h3>
-                      <p class="elementor-image-box-description">Podcast #1</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-5522448 elementor-align-center elementor-widget elementor-widget-button" data-id="5522448" data-element_type="widget" data-widget_type="button.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a href="https://www.youtube.com/watch?v=CMHPCMre9NE" class="podcastBtn" role="button" target="_blank">
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Check It Out</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="s2Card" data-id="e0ba0b3" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-element elementor-element-21523e0 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="21523e0" data-element_type="widget" data-widget_type="image-box.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img"><img id="podcast2Img" width="2560" height="1440" src="../Images/podcast2Img.jpg" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-                    <div class="elementor-image-box-content">
-                      <h3 class="elementor-image-box-title">A walkthrough our island</h3>
-                      <p class="elementor-image-box-description">Podcast #2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-1a5d5ac elementor-align-center elementor-widget elementor-widget-button" data-id="1a5d5ac" data-element_type="widget" data-widget_type="button.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a href="https://youtu.be/1n3hTdfulOc" class="podcastBtn" role="button" target="_blank">
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Check It Out</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="sec2card3" class="s2Card" data-id="f89b746" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-element elementor-element-c5cd057 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="c5cd057" data-element_type="widget" data-widget_type="image-box.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img"><img id="podcast3Img" width="2400" height="1350" src="../Images/podcast3Img.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-                    <div class="elementor-image-box-content">
-                      <h3 class="elementor-image-box-title">Meet the artist</h3>
-                      <p class="elementor-image-box-description">Podcast #3</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-d8d0b4e elementor-align-center elementor-widget elementor-widget-button" data-id="d8d0b4e" data-element_type="widget" data-widget_type="button.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a href="https://youtu.be/9lIVcgWOGmI" class="podcastBtn" role="button" target="_blank">
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Check It Out</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="section-one mt-4">
+      <div class="container">
+        <div class="aspect-ratio-video">
+          <!-- <iframe src="https://player.vimeo.com/video/734642939?h=a27e0f6702&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" title="MetaSavages Tribe Teaser 2022"></iframe> -->
+          <div class="bg-black"></div>
         </div>
       </div>
     </section>
 
-    <section class="section-three" id="section3">
-      <img id="learnToEarn" src="../Images/learn_2_earn1.png" />
-      <h2 id="section3Title">OUR MAIN UTILITY BENEFIT</h2>
-      <p id="section3Description">There are so many fake gurus going around and spilling outdated money-making stories, we want to change that, by taking all the fluff and bullshit out of your learning experience by focusing on things that really work right now. We want to make sure you fully monetize your learning potential, that’s why we developed the first of its kind Learn2Earn mechanic, where you’ll be rewarded for participating in different kinds of events. We will have utilities such as NFT University, where you’ll be taken through a series of courses in order to understand the topic in-depth, by some of the leading minds of the industry. After performing a quick test on what you’ve learned you’ll be rewarded with a certificate badge and our tokens, which you’d be able to spend in various ways on our meta island.</p>
-    </section>
-    <section class="section-four" id="section4">
-      <div id="section4Content">
-        <h2 id="section4Title">TRIBE GOALS</h2>
-        <h2 id="section4SubTitle">BUILDING VALUE FROM OUR COMMUNITY</h2>
-        <p>The main focus of our tribe is teaching and learning about how we can generate more digital assets or in other words, how we can make more money through the vast opportunities of the new WEB 3.0 era. If you are into NFT’s, crypto, e-com, affiliate marketing, DeFi and you want to expand your knowledge and network in order to make more cash – then you are the Savages that we are looking for to join our ranks. Being a part of our community will give you early access to a lot of insider information on hot new projects coming out, whitelists, and top practices for multiplying your assets.</p>
-        <div class="features-grid">
-          <div class="md:order-1"></div>
-          <div class="md:order-2">
-            <h2 id="section4Title2">MAKE MONEY</h2>
-            <p>What makes our Metaverse unique is that you can LEARN TO EARN. Meaning that you will be rewarded for participating in the different educational events and activities.</p>
-          </div>
-          <div class="md:order-4">
-            <img class="w-full" src="/images/goals_learn.png" alt="goals_learn.png" />
-          </div>
-          <div class="md:order-3">
-            <h2 id="section4Title3">LEARN</h2>
-            <p>We want our island to have both our educational side, but also give the people the opportunity to have fun, relax and enjoy their stay on the island. For that reason, we will be aiming to collaborate and invite singers, and DJ’s to make sure every member has a great time.</p>
-          </div>
-          <div class="md:order-5">
-            <img class="w-full" src="/images/goals_learn.png" alt="gaols_learn.png" />
-          </div>
-          <div class="md:order-6">
-            <h2 id="section4Title4">ENTERTAIN</h2>
-            <p>In our Metaverse we aim to create an ecosystem where people could come to learn, have fun and build long lasting relationships.</p>
-          </div>
-          <!-- <div class="md:order-7">
-            <img class="w-full" src="/images/goals_entertain.png" id="section4LastImg" alt="goals_entertain.png" />
-          </div> -->
-        </div>
-      </div>
-    </section>
-    <section class="section-five" id="section5">
-      <div id="section5Content">
-        <h2 id="section5Title">COLLECTION</h2>
-        <p>As huge comic book fans, we were inspired to create a collection that represents that exact art style. We developed 10 different savages, which would represent the different profiles we believe are a good fit for our tribe. We are extremely grateful for the dedication of our artist – Konstantin Vitkov for creating such an amazing collection and concept art for our meta world. Each character will have 1000 unique variations and that would make up our collection of 10000 NFT’s. Our goal for the artwork was to create a blend between a post-apocalyptic Mad Max-style, with a more digital Cyberpunk twist, representing our tribe of digital Web 3.0 rebels. Our characters will be developed into fully functional 3D models, which you can use as avatars in Metaverse, where you’ll have the option to pimp them out even further. Holding one of our NFT’s will give you access to our Metaverse, as well as other perks which will be revealed soon.</p>
-        <a href="https://discord.gg/QvgQXbBS" id="section5Btn" role="button" target="_blank">
-          <span class="elementor-button-content-wrapper">
-            <span class="elementor-button-text">Apply For Whitelist On Discord</span>
-          </span>
-        </a>
-        <div id="sec5CardContainer">
-          <!-- <img id="sec5Img1" src="../Images/sec5Img1.png" />
-                <img id="sec5Img2" src="../Images/sec5Img2.png" />
-                <img id="sec5Img3" src="../Images/sec5Img3.png" />
-                <img id="sec5Img4" src="../Images/sec5Img4.png" />
-                <img id="sec5Img5" src="../Images/sec5Img5.png" />
-                <img id="sec5Img6" src="../Images/sec5Img6.png" />
-                <img id="sec5Img7" src="../Images/sec5Img7.png" />
-                <img id="sec5Img8" src="../Images/sec5Img8.png" />
-                <img id="sec5Img9" src="../Images/sec5Img9.png" /> -->
-          <video id="sec5video" src="../Images/NFT's.mp4" controls></video>
-        </div>
-      </div>
-    </section>
-    <section class="section-six" id="section6">
-      <div id="section6Content">
-        <h2 id="section6Title">CHARACTER ROSTER</h2>
-        <img id="sec6Photo" src="../Images/section6Logo.png" />
-        <!-- <div id="imgSlider" class="slider">
-                <img id="brutus" class="sec6img" src="../Images/brutus.png" />
-                <img id="fox" class="sec6img" src="../Images/fox.png" />
-                <img id="bones" class="sec6img" src="../Images/bones.png" />
-                <img id="spike" class="sec6img" src="../Images/spike.png" />
-                <img id="commingSoon" class="sec6img" src="../Images/commingSoon.png" />
-            </div> -->
-        <div id="sec6Swiper" class="swiper1 mySwiper1">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img id="brutus" class="sec6img" src="../Images/brutus.png" /></div>
-            <div class="swiper-slide"><img id="fox" class="sec6img" src="../Images/fox.png" /></div>
-            <div class="swiper-slide"><img id="bones" class="sec6img" src="../Images/bones.png" /></div>
-            <div class="swiper-slide"><img id="spike" class="sec6img" src="../Images/spike.png" /></div>
-            <div class="swiper-slide"><img id="commingSoon" class="sec6img" src="../Images/commingSoon.png" /></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-seven" id="section7">
-      <div id="section7Content">
-        <h2 id="section7Title">THE ARTIST</h2>
-        <div id="personalInfo">
-          <img id="personalPhotoKV" src="../Images/section7viktor.png" />
-          <h3 class="elementor-image-box-title">Konstantin Vitkov-Titis</h3>
-          <p class="elementor-image-box-description">Comic book artist</p>
-        </div>
-        <div id="section7TextContainer">
-          <p>Our NFT's have been hand drawn by one of the top comic book artists in Europe – Konstantin Vitkov.</p>
-          <p>Truly a savage in his craft and a person with who we are more than proud to work. A loving husband and a father, a die-hard Mike Mignola fan, and a full-time SAVAGE!</p>
-          <p>He started his journey into the art world at the age of 4 and has not stopped creating amazing worlds for us ever since, even publishing his own comic book Jack Eridon and his latest hit, Kamikaze.</p>
-          <p>To add to this impressive list, our fellow savage has already built an impressive track record on his IMDB page working for movies such as Rambo(2008), the Expandables, Olympus has Fallen, and many more. What drove him to work in the NFT fields is the possibility for him to present himself and his work within this amazing new platform, as well as the creative freedom he gets working on this project.</p>
-        </div>
-        <img id="kamikazePhoto" src="../Images/section7kamikaze.png" />
-        <img id="eridonPhoto" src="../Images/section7eridon.png" />
-        <h2 class="elementor-heading-title elementor-size-default">Follow on:</h2>
-        <a href="https://www.linkedin.com/in/konstantin-vitkov-titis-1701a8a4/" target="_blank">
-          <img id="linkedInPhoto" src="../Images/section7Linkedin.png" style="height: 40px" />
-        </a>
-        <a href="https://www.imdb.com/name/nm3946835/?ref_=nv_sr_srsg_0" target="_blank">
-          <img id="imdbPhoto" src="../Images/section7Imdb.png" style="height: 40px" />
-        </a>
-      </div>
-    </section>
-    <section class="section-eight" id="section8">
-      <div id="section8Content">
-        <img id="sec8FrontPhoto" src="../Images/section8FrontImg.png" />
-        <p><span style="font-weight: 400">Building our metaverse was our highest priority, we wanted to have it finished before we launch the project – mission accomplished, it is ready! A lot of NFT projects are promising a metaverse somewhere along with their roadmap, but for us, it’s something essential, we believe that that’s the recipe of keeping a community together from the start. We love going to conferences and mastermind events all over the world, primarily for the networking side of it. There is a huge problem with staying in touch with the cool people you get to meet though. After every event, we usually end up with a telegram group or something like that and it goes well for a couple of weeks, but after that communication starts falling apart because people go back home and get on with their lives and problems. That’s why it was so important for us to create a common space, where we can all hang out in a much more natural way. We are going to have conferences, workshops, NFT reveals, DJs, and loads of games so we can spend more time together learning and having fun, the metaverse we built gives us exactly that. We are going to continue developing it as we go and we hope that all of our tribe members will bring in even more exciting ideas once we officially launch.&nbsp;&nbsp;</span></p>
-        <video id="sec8video" src="../Images/Metaverse.mp4" controls></video>
-        <div id="logosSec8"><img id="sec8LogosImg" src="../Images/androidIOSWindowsMAC.png" /></div>
-      </div>
-    </section>
-    <section class="section-nine" id="section9">
-      <div id="section9Content">
-        <h2 id="section9Title">EVENTS</h2>
-        <img id="section9Img" src="../Images/goals_entertain.png" />
-      </div>
-    </section>
-    <section class="section-ten" id="section10">
-      <div id="section10Content">
-        <h2 id="section10Title">ROADMAP</h2>
-        <h2 id="section10SubTitle">WHAT WE'VE DONE SO FAR</h2>
-        <p id="section10Description">We have been working on the Meta Savages project for more than 9 months now, in that time we managed to build our first metaverse based on the Unity game engine thanks to our Ukrainian Crew at Z Lab technologies. We have finalized the concept art of our NFT collection and fully developed 5 of our 10 characters. We have signed our first 10 speakers for our Meta Events on e-com, NFT’s, and Crypto topics. We are proud to say that we fully funded the process so far, through our business and the hours our team has invested in this.</p>
-        <div class="elementor-widget-container">
-          <!-- <div id="sec10Cards" class="elementor-image-carousel swiper-wrapper">
-                    <img class="swiper-slide-image" src="../Images/sec10Img1.png" alt="roadmap-04">
-                    <img class="swiper-slide-image" src="../Images/sec10Img2.png" alt="roadmap-05">
-                    <img class="swiper-slide-image" src="../Images/sec10Img3.png" alt="roadmap-06">
-                    <img class="swiper-slide-image" src="../Images/sec10Img4.png" alt="roadmap-07">
-                    <img class="swiper-slide-image" src="../Images/sec10Img5.png" alt="roadmap-08">
-                    <img class="swiper-slide-image" src="../Images/sec10Img6.png" alt="roadmap-09">
-                    <img class="swiper-slide-image" src="../Images/sec10Img7.png" alt="roadmap-10">
-                    <img class="swiper-slide-image" src="../Images/sec10Img8.png" alt="roadmap-10">
-                    <img class="swiper-slide-image" src="../Images/sec10Img9.png" alt="roadmap-10">
-                    <img class="swiper-slide-image" src="../Images/sec10Img10.png" alt="roadmap-10">
-                </div> -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img1.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img2.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img3.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img4.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img5.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img6.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img7.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img8.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img9.png" /></div>
-              <div class="swiper-slide"><img class="swiper-slide-image" src="../Images/sec10Img10.png" /></div>
-            </div>
-            <!-- If we need pagination -->
-            <div id="sec10Pagination" class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div id="sec10PrevBtn" class="swiper-button-prev"></div>
-            <div id="sec10NextBtn" class="swiper-button-next"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-eleven" id="section11">
-      <div id="section11Content">
-        <h2 id="section11Title">TEAM</h2>
-        <div id="teamMembers">
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/bad_torro/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 1ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Todor<br />Minev</h3>
-              <p class="elementor-image-box-description">CEO</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/ignasio9/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 2ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Ignas<br />Fiodorovas</h3>
-              <p class="elementor-image-box-description">COO</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.imdb.com/name/nm3946835/?ref_=nv_sr_srsg_0" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 3ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Konstantin<br />Vitkov-Titis</h3>
-              <p class="elementor-image-box-description">NFT Artist</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/gesh_p/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 4ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">George<br />Pavlov</h3>
-              <p class="elementor-image-box-description">CFO</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/vasil.v.videnov/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 5ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Vasil<br />Videnov</h3>
-              <p class="elementor-image-box-description">Team Leader</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/yourlocalartdealerm/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 6ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Stoyan<br />Kotsev</h3>
-              <p class="elementor-image-box-description">Community Manager</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/ivan_kidon/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 7ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Ivan<br />Popov</h3>
-              <p class="elementor-image-box-description">Graphic Designer</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://instagram.com/icoarakliev" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 8ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Hristo<br />Arakliev</h3>
-              <p class="elementor-image-box-description">Tokenomics Expert</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://instagram.com/pickle_nikk" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 9ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Nikoli<br />Whitburn</h3>
-              <p class="elementor-image-box-description">Social Media/Discord Expert</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/joseaguayowills/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 10ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">Jose<br />Wills</h3>
-              <p class="elementor-image-box-description">Twitter Manager</p>
-            </div>
-          </div>
-          <div class="elementor-image-box-wrapper">
-            <a href="https://www.instagram.com/georgeunguzov/" target="_blank">
-              <figure class="elementor-image-box-img"><img width="290" height="290" src="../Images/Team/Asset 11ldpi.png" class="attachment-full size-full" alt="" loading="lazy" /></figure>
-            </a>
-            <div class="elementor-image-box-content">
-              <h3 class="elementor-image-box-title">George<br />Unguzov</h3>
-              <p class="elementor-image-box-description">Content Creator</p>
-            </div>
-          </div>
-        </div>
-        <h2 id="section11SubTitle">PARTNERS</h2>
-        <img id="sec11Oculus" src="../Images/sec8Oculus.png" />
-        <img id="sec11Zlab" src="../Images/sec8Zlab.png" />
-        <img id="sec11Unity" src="../Images/sec8Unity.png" />
-      </div>
-    </section>
-    <section class="section-twelve" id="section12">
-      <div id="section12Content">
-        <img id="sec12Image" src="../Images/logo-1.png" />
-        <h2 id="section12Title">LEARN, EARN AND HAVE FUN</h2>
-        <h2 id="section12SubTitle">GET THE LATEST NEWS</h2>
-        <input id="emailInput" size="1" type="email" name="form_fields[email]" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Email" required aria-required="true" />
-        <button id="sendEmailBtn" onclick="sendEmail(); return false" type="submit" class="elementor-button elementor-size-sm elementor-animation-grow">
-          <span>
-            <span class="elementor-button-icon"> </span>
-            <span class="elementor-button-text">Submit</span>
-          </span>
-        </button>
-        <div id="sec12Logos" class="elementor-social-icons-wrapper elementor-grid">
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-d4a121b" href="https://discord.gg/QvgQXbBS" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.04 53.25">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M12.73,40.72a5.75,5.75,0,0,0,1.5,1.92,21.68,21.68,0,0,0,7.83,4.86l1.23.45c.05,0,.08.07.18.15-.43.54-.85,1.08-1.28,1.61-.8,1-1.62,2-2.42,3a1.09,1.09,0,0,1-1,.52,44.14,44.14,0,0,1-5.36-.8A23.21,23.21,0,0,1,1.93,46c-.21-.22-.41-.44-.6-.68C-.26,43.37,0,44,.06,41.4c.05-1.54.14-3.08.31-4.6.23-2.07.48-4.14.84-6.19a89.28,89.28,0,0,1,3.73-14.1A85.08,85.08,0,0,1,8.78,7.36a3,3,0,0,1,1-1.17A33.87,33.87,0,0,1,22.36.58C23.67.32,25,.2,26.34,0a1,1,0,0,1,1.08.71C26.17,1.14,25,1.54,23.76,2A44.17,44.17,0,0,0,12,8.12a5.18,5.18,0,0,0-.63.61l-.13,0,.07.08.07-.12a8.88,8.88,0,0,0,.9-.36A50,50,0,0,1,24.38,4c1.79-.41,3.62-.63,5.44-.86a55.25,55.25,0,0,1,7.71-.49,55,55,0,0,1,7.13.58,51.52,51.52,0,0,1,9,2.16A52.41,52.41,0,0,1,60.54,8.3l1,.45s.1.06,0,0h-.07a3.71,3.71,0,0,0-.55-.63A41,41,0,0,0,51.79,3c-1.66-.69-3.39-1.25-5.08-1.87A1.92,1.92,0,0,1,46.42,1c.56-1,.69-1,1.74-.93A32,32,0,0,1,58.79,3a38.37,38.37,0,0,1,5.6,3.29,3.1,3.1,0,0,1,.94,1.21A81.56,81.56,0,0,1,70.25,19.9a83.38,83.38,0,0,1,2.6,10.67,57.11,57.11,0,0,1,.89,7.26c.09,1.7.19,3.4.29,5.09a2,2,0,0,1-.45,1.37,21.52,21.52,0,0,1-7.88,6.34,25.52,25.52,0,0,1-7.34,2.26c-1,.17-2.07.23-3.1.34a.89.89,0,0,1-.88-.32c-1.19-1.5-2.4-3-3.61-4.49,0-.06-.07-.14-.14-.28a26.34,26.34,0,0,0,6.19-2.79,19.32,19.32,0,0,0,5.06-4.6c-.19,0-.29,0-.36.09a45.93,45.93,0,0,1-10.66,4.83,38.09,38.09,0,0,1-9.15,1.83c-1.48.11-3,.27-4.43.25a48.69,48.69,0,0,1-7.53-.69,49.12,49.12,0,0,1-12-3.71c-1.54-.71-3-1.59-4.49-2.39a4.61,4.61,0,0,0-.51-.22l-.05,0Zm19-10.25a5.88,5.88,0,0,0-2.59-5.57,6.33,6.33,0,0,0-9.27,1.72,7.51,7.51,0,0,0,.43,8.69A6.07,6.07,0,0,0,25,37.75a6.16,6.16,0,0,0,5.63-3.24A7.34,7.34,0,0,0,31.7,30.47Zm10.14.22a7.37,7.37,0,0,0,1.65,4.71,6.16,6.16,0,0,0,9.65.05,7.65,7.65,0,0,0,.47-8.91A6.21,6.21,0,0,0,44.44,25,7,7,0,0,0,41.84,30.69Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-01cfbb3" href="#" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.24 56.39">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M25.4,53c0-.8,0-1.5,0-2.19.16-2.61.34-5.23.52-7.84.11-1.71.24-3.42.33-5.14a1.39,1.39,0,0,1,.54-1c2.69-2.41,5.37-4.84,8.05-7.26l9.8-8.82,9.94-8.95c.36-.32.78-.61.85-1.17a.92.92,0,0,0-1.16-.35,7.72,7.72,0,0,0-1.58.71c-4.46,2.8-8.9,5.62-13.36,8.43L18.23,32.69l-.56.33-7-2.23c-2.77-.87-5.54-1.74-8.3-2.64a5.81,5.81,0,0,1-1.5-.68,1.53,1.53,0,0,1-.26-2.58,6,6,0,0,1,2.18-1.42c1-.42,2-.8,3-1.19q28.5-11,57-22A5,5,0,0,1,64.27,0,2.67,2.67,0,0,1,67,1.83a5.37,5.37,0,0,1,.11,3.1C65.54,12.14,64,19.35,62.45,26.56,61.2,32.46,60,38.38,58.71,44.28q-.93,4.44-1.9,8.86a7.52,7.52,0,0,1-.51,1.47,2.79,2.79,0,0,1-3.7,1.58,6.54,6.54,0,0,1-1.77-.89Q43.54,50,36.28,44.57l-.46-.33-.58.53L28.1,51.71A4.08,4.08,0,0,1,26,52.92,4,4,0,0,1,25.4,53Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-87158c4" href="https://twitter.com/metasavagesnft" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.95 62.12">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M0,55.26a32.35,32.35,0,0,0,22.82-6.6c-.8-.1-1.47-.17-2.14-.27a15.42,15.42,0,0,1-9.44-5.31,14.67,14.67,0,0,1-2.75-4.69c-.08-.2-.14-.4-.22-.66a16.31,16.31,0,0,0,6.78-.23c-1.14-.43-2.24-.82-3.3-1.27a12.66,12.66,0,0,1-3.06-1.88,15.91,15.91,0,0,1-2.5-2.49,15.12,15.12,0,0,1-1.88-3,15.66,15.66,0,0,1-1.18-3.39A12.85,12.85,0,0,1,2.79,22c1.13.43,2.22.9,3.35,1.25a13.27,13.27,0,0,0,3.63.57A15.68,15.68,0,0,1,2.93,11.93,15.18,15.18,0,0,1,5,2.92,44.9,44.9,0,0,0,37.25,19.3c-.07-.57-.14-1-.2-1.51a15.23,15.23,0,0,1,1.58-9.24A15.68,15.68,0,0,1,63.47,4.41a4.42,4.42,0,0,1,.44.55A31.38,31.38,0,0,0,74,1.17a15.19,15.19,0,0,1-2.58,4.88,17.61,17.61,0,0,1-4,3.68A29.48,29.48,0,0,0,76,7.43a29.61,29.61,0,0,1-7.65,8c0,.28,0,.58,0,.89A39.28,39.28,0,0,1,68,22.48,45.6,45.6,0,0,1,65,34.3,44.93,44.93,0,0,1,52.25,52.07,41.49,41.49,0,0,1,35.06,60.8a40.51,40.51,0,0,1-8,1.2c-1.86.08-3.74.17-5.6.08A43.64,43.64,0,0,1,5.9,58.43,44.23,44.23,0,0,1,.53,55.62C.35,55.51.18,55.38,0,55.26Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
-          <span class="elementor-grid-item">
-            <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-83d92d6" href="https://instagram.com/meta.savages.nft?utm_medium=copy_link" target="_blank">
-              <span class="elementor-screen-only"></span>
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.13 63.13">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #1effff;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <path class="cls-1" d="M31.61,19.43A12.15,12.15,0,1,0,43.7,31.64,12.07,12.07,0,0,0,31.61,19.43Z"></path>
-                    <path class="cls-1" d="M63.12,17.47a19.93,19.93,0,0,0-.19-2.57,16.84,16.84,0,0,0-2.06-6.05A17.35,17.35,0,0,0,54.8,2.56,17.07,17.07,0,0,0,45.68,0H17.82a19.68,19.68,0,0,0-3.25.25A17.38,17.38,0,0,0,1.47,10.42,17,17,0,0,0,0,17.33Q0,31.55,0,45.77A17.29,17.29,0,0,0,.2,48.26a16.87,16.87,0,0,0,2.07,6,17.24,17.24,0,0,0,6,6.25,17,17,0,0,0,9.12,2.57q13.63,0,27.27,0c.66,0,1.32,0,2,0A15.47,15.47,0,0,0,50,62.59a17.11,17.11,0,0,0,7.62-4.17,17.38,17.38,0,0,0,5.5-12.69c0-4.72,0-9.43,0-14.15S63.13,22.17,63.12,17.47ZM31.54,48.38A16.82,16.82,0,1,1,48.38,31.61,16.84,16.84,0,0,1,31.54,48.38ZM49.06,17.33a3.27,3.27,0,0,1-3.25-3.28,3.26,3.26,0,1,1,6.52,0A3.28,3.28,0,0,1,49.06,17.33Z"></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </span>
-        </div>
-        <h2 id="rightsReserved" class="elementor-heading-title elementor-size-default">All rights reserved Metasavages 2022</h2>
-      </div>
-    </section>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
     <script src="/src/index.js" type="module"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+const aspectRatio = require('@tailwindcss/aspect-ratio')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html'],
@@ -9,8 +11,9 @@ module.exports = {
     extend: {},
   },
   corePlugins: {
+    aspectRatio: false,
     backgroundOpacity: false,
     textOpacity: false,
   },
-  plugins: [],
+  plugins: [aspectRatio],
 }

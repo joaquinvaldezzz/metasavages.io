@@ -23,6 +23,8 @@
     "Opera >= 30"
   ],
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.2",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "autoprefixer": "^10.4.8",
     "tailwindcss": "^3.1.7",
     "vite": "^3.0.4"

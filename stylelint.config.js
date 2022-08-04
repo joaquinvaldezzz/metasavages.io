@@ -11,5 +11,6 @@ module.exports = {
     'order/properties-order': [...postcssSorting.propertiesOrder],
     'prettier/prettier': true,
     'selector-id-pattern': null,
+    'scss/at-rule-no-unknown': [true, { ignoreAtRules: ['screen'] }],
   },
 }

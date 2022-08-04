@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 const aspectRatio = require('@tailwindcss/aspect-ratio')
 
 /** @type {import('tailwindcss').Config} */
@@ -8,7 +9,11 @@ module.exports = {
       center: true,
       padding: '1rem',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   corePlugins: {
     aspectRatio: false,

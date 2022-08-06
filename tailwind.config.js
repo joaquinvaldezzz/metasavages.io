@@ -10,6 +10,9 @@ module.exports = {
       padding: '1rem',
     },
     extend: {
+      colors: {
+        aqua: '#1effff',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
@@ -18,6 +21,7 @@ module.exports = {
   corePlugins: {
     aspectRatio: false,
     backgroundOpacity: false,
+    borderOpacity: false,
     textOpacity: false,
   },
   plugins: [aspectRatio],

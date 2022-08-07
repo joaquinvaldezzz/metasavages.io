@@ -1,3 +1,6 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+const aspectRatio = require('@tailwindcss/aspect-ratio')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html'],
@@ -6,11 +9,20 @@ module.exports = {
       center: true,
       padding: '1rem',
     },
-    extend: {},
+    extend: {
+      colors: {
+        aqua: '#1effff',
+      },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   corePlugins: {
+    aspectRatio: false,
     backgroundOpacity: false,
+    borderOpacity: false,
     textOpacity: false,
   },
-  plugins: [],
+  plugins: [aspectRatio],
 }

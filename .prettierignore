@@ -1,5 +1,5 @@
 .DS_Store
 *.local
 dist-ssr
-dist/assets
+dist
 node_modules

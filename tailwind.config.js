@@ -1,9 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const aspectRatio = require('@tailwindcss/aspect-ratio')
+const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html'],
+  content: ['./src/**/*.astro', './src/**/*.js'],
   theme: {
     container: {
       center: true,
@@ -20,9 +20,14 @@ module.exports = {
   },
   corePlugins: {
     aspectRatio: false,
-    backgroundOpacity: false,
-    borderOpacity: false,
-    textOpacity: false,
   },
-  plugins: [aspectRatio],
+  plugins: [
+    plugin(({ addBase }) => {
+      addBase({
+        body: {
+          'min-width': '320px',
+        },
+      })
+    }),
+  ],
 }

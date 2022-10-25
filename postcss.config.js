@@ -4,7 +4,7 @@ module.exports = {
   plugins: {
     autoprefixer: {},
     '@fullhuman/postcss-purgecss': process.env.NODE_ENV === 'production' && {
-      content: ['./index.html', './src/**/*.js'],
+      content: ['./src/**/*.astro', './src/**/*.js'],
       defaultExtractor: (content) => {
         const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]+/g) || []
         const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]+/g) || []

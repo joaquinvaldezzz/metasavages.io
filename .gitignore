@@ -3,8 +3,3 @@
 dist
 dist-ssr
 node_modules
-
-functions.js
-index-ref.html
-public/images
-styles.css

@@ -5,6 +5,10 @@ export default defineConfig({
     format: 'file',
   },
   vite: {
+    server: {
+      host: '0.0.0.0',
+      open: true,
+    },
     build: {
       rollupOptions: {
         output: {
@@ -19,8 +23,8 @@ export default defineConfig({
 
             return `assets/${extension}/[name].[hash][extname]`
           },
-          chunkFileNames: 'assets/[name].[hash].js',
-          entryFileNames: 'assets/[name].[hash].js',
+          chunkFileNames: 'assets/[hash].js',
+          entryFileNames: 'assets/[hash].js',
         },
       },
     },

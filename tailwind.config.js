@@ -22,10 +22,12 @@ module.exports = {
     aspectRatio: false,
   },
   plugins: [
-    plugin(({ addBase }) => {
+    plugin(({ addBase, theme }) => {
       addBase({
         body: {
           'min-width': '320px',
+          color: theme('colors.white'),
+          'background-color': theme('colors.black'),
         },
       })
     }),

@@ -12,7 +12,7 @@
   },
   "lint-staged": {
     "*.{astro,scss,js}": "prettier --write",
-    "*.js": "eslint --cache --fix",
+    "*.js": "eslint --fix",
     "*.scss": "stylelint --fix"
   },
   "browserslist": {

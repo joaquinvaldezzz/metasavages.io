@@ -12,8 +12,8 @@
   },
   "lint-staged": {
     "*.{astro,scss,js}": "prettier --write",
-    "*.scss": "stylelint --fix",
-    "*.js": "eslint --cache --fix"
+    "*.js": "eslint --cache --fix",
+    "*.scss": "stylelint --fix"
   },
   "browserslist": {
     "development": [
@@ -34,11 +34,11 @@
     ]
   },
   "dependencies": {
-    "astro": "^1.6.5",
+    "astro": "^1.6.8",
     "astro-seo-meta": "^1.1.0",
     "autoprefixer": "^10.4.13",
     "purgecss": "^5.0.0",
-    "tailwindcss": "^3.2.3"
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
     "eslint": "^8.27.0",
@@ -48,7 +48,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": ">=8",
     "lint-staged": ">=13",
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.19",
     "postcss-scss": "^4.0.5",
     "postcss-sort-media-queries": "^4.3.0",
     "postcss-sorting": "^7.0.1",
@@ -56,7 +56,7 @@
     "prettier-plugin-astro": "^0.7.0",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "sass": "^1.56.1",
-    "stylelint": "^14.14.1",
+    "stylelint": "^14.15.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-order": "^5.0.0",

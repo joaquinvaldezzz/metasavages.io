@@ -14,7 +14,7 @@ module.exports = {
         aqua: '#1effff',
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
       },
     },
   },

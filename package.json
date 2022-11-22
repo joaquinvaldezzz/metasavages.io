@@ -6,7 +6,6 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "prepare": "husky install",
-    "purgecss": "purgecss --config ./purgecss.config.js -o ./dist/assets",
     "serve": "astro preview",
     "stylelint": "stylelint --fix './src/**/*.scss'"
   },

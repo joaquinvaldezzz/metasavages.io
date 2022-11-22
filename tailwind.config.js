@@ -11,10 +11,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        aqua: '#1effff',
+        primary: '#54f9ff',
+        secondary: '#00ff85',
+        tertiary: '#c0c0c0',
+        accent: '#e11c24',
       },
       fontFamily: {
-        sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
+        sans: ['Rajdhani', ...defaultTheme.fontFamily.sans],
+        display: ['Chakra Petch', 'system-ui'],
       },
     },
   },

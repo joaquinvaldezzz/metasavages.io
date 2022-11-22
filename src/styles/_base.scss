@@ -1,9 +1,28 @@
 @import 'tailwindcss/base';
 
 @font-face {
-  font-weight: 200 900;
-  font-family: 'Mona Sans';
-  font-stretch: 75% 125%;
-  src: url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
-    url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 400;
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/ChakraPetch-Regular.woff2') format('woff2'),
+    url('/fonts/ChakraPetch-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/ChakraPetch-Bold.woff2') format('woff2'),
+    url('/fonts/ChakraPetch-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Rajdhani;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Rajdhani-Regular.woff2') format('woff2'),
+    url('/fonts/Rajdhani-Regular.woff') format('woff');
 }

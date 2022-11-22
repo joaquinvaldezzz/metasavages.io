@@ -1,5 +1,9 @@
 import { defineConfig } from 'astro/config'
+import purgecss from 'astro-purgecss'
+// eslint-disable-next-line import/extensions
+import contents from './contents.js'
 
+// https://astro.build/config
 export default defineConfig({
   build: {
     format: 'file',
@@ -14,13 +18,11 @@ export default defineConfig({
         output: {
           assetFileNames: (info) => {
             let extension = info.name.split('.').at(1)
-
             if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extension)) {
               extension = 'img'
             } else if (/css/i.test(extension)) {
               return `assets/[hash][extname]`
             }
-
             return `assets/${extension}/[name].[hash][extname]`
           },
           chunkFileNames: 'assets/[hash].js',
@@ -29,4 +31,16 @@ export default defineConfig({
       },
     },
   },
+  integrations: [
+    purgecss({
+      content: [...contents],
+      defaultExtractor: (content) => {
+        const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]+/g) || []
+        const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]+/g) || []
+        return broadMatches.concat(innerMatches)
+      },
+      keyframes: true,
+      variables: true,
+    }),
+  ],
 })

@@ -3,10 +3,26 @@ import MainLayout from '../layouts/MainLayout.astro'
 ---
 
 <MainLayout title="Meta Savages">
+  <header class="fixed inset-x-0 top-0">
+    <div class="container flex items-center justify-between py-4 sm:py-6 md:py-8">
+      <a href="/">
+        <img class="w-32" src="/images/meta-savages.png" alt="Meta Savages" />
+      </a>
+
+      <nav class="hidden md:flex md:items-center md:gap-4">
+        <a href="#">Metaverse</a>
+        <a href="#">NFT's</a>
+        <a href="#">Roadmap</a>
+        <a href="#">Team &amp; Partners</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
     <section id="hero">
       <div>
-        <h1 class="title w-full text-center">Coming soon</h1>
+        <h1 class="title w-full text-center font-display">Coming Soon</h1>
       </div>
     </section>
   </main>

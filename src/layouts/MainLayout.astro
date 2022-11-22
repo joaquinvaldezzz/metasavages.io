@@ -2,7 +2,13 @@
 import { Seo } from 'astro-seo-meta'
 import '../styles/main.scss'
 
-const { title } = Astro.props
+type Props = {
+  name: string
+  suffix?: string
+}
+
+const { name, suffix } = Astro.props as Props
+const title = name + (suffix ? ` - ${suffix}` : '')
 ---
 
 <!DOCTYPE html>

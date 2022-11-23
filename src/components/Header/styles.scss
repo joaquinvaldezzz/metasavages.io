@@ -1,0 +1,7 @@
+[aria-label='Desktop navigation'] {
+  .active,
+  > a:hover {
+    color: theme('colors.primary');
+    text-shadow: 0 0 theme('blur.DEFAULT') theme('colors.primary');
+  }
+}

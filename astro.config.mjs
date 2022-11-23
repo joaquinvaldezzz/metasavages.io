@@ -1,7 +1,5 @@
 import { defineConfig } from 'astro/config'
 import purgecss from 'astro-purgecss'
-// eslint-disable-next-line import/extensions
-import contents from './contents.js'
 
 // https://astro.build/config
 export default defineConfig({
@@ -33,7 +31,13 @@ export default defineConfig({
   },
   integrations: [
     purgecss({
-      content: [...contents],
+      content: [
+        './src/backgrounds/**/*.astro',
+        './src/components/**/*.astro',
+        './src/layouts/**/*.astro',
+        './src/pages/**/*.astro',
+        './src/scripts/**/*.js',
+      ],
       defaultExtractor: (content) => {
         const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]+/g) || []
         const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]+/g) || []

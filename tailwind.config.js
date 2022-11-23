@@ -1,10 +1,15 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
-const contents = require('./contents')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [...contents],
+  content: [
+    './src/backgrounds/**/*.astro',
+    './src/components/**/*.astro',
+    './src/layouts/**/*.astro',
+    './src/pages/**/*.astro',
+    './src/scripts/**/*.js',
+  ],
   theme: {
     container: {
       center: true,
@@ -25,6 +30,8 @@ module.exports = {
   },
   corePlugins: {
     aspectRatio: false,
+    backgroundOpacity: false,
+    textOpacity: false,
   },
   plugins: [
     plugin(({ addBase, theme }) => {

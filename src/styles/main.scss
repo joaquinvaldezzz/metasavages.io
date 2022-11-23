@@ -10,10 +10,6 @@
 
 #hero {
   min-height: theme('minHeight.screen');
-  background-image: url('/images/bg/01.png');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 
   > div {
     display: flex;

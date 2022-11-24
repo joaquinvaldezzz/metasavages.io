@@ -2,6 +2,12 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import Header from '../components/Header/Header.astro'
 import Transition2 from '../backgrounds/Transition2.astro'
+import NFT from '../backgrounds/NFT.astro'
+import Roadmap from '../backgrounds/Roadmap.astro'
+import Transition1 from '../backgrounds/Transition1.astro'
+import Transition3 from '../backgrounds/Transition3.astro'
+import Transition4 from '../backgrounds/Transition4.astro'
+import Partners from '../backgrounds/Partners.astro'
 ---
 
 <MainLayout name="Meta Savages" suffix="The Web 3.0 tribe for digital entrepreneurs">
@@ -14,8 +20,28 @@ import Transition2 from '../backgrounds/Transition2.astro'
       </div>
     </section>
 
-    <section class="relative min-h-screen">
+    <section class="relative">
       <Transition2 />
+    </section>
+
+    <section class="relative min-h-screen overflow-hidden" aria-label="NFT">
+      <NFT />
+    </section>
+
+    <section class="relative min-h-screen overflow-hidden">
+      <Transition4 />
+    </section>
+
+    <section class="relative min-h-screen overflow-hidden" aria-label="Roadmap">
+      <Roadmap />
+    </section>
+
+    <section class="relative min-h-screen overflow-hidden">
+      <Transition1 />
+    </section>
+
+    <section class="relative min-h-screen overflow-hidden" aria-label="Partners">
+      <Partners />
     </section>
   </main>
 </MainLayout>

@@ -26,6 +26,9 @@ module.exports = {
         sans: ['Rajdhani', ...defaultTheme.fontFamily.sans],
         display: ['Chakra Petch', 'system-ui'],
       },
+      minHeight: {
+        inherit: 'inherit',
+      },
     },
   },
   corePlugins: {

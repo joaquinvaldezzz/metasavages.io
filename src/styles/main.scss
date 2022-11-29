@@ -3,18 +3,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-#hero {
-  min-height: theme('minHeight.screen');
-
-  > div {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    min-height: inherit;
-  }
-}
-
 .title {
   font-weight: theme('fontWeight.bold');
   font-size: 2rem;

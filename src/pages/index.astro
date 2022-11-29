@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 import Header from '../components/Header/Header.astro'
+import MetaIsland from '../backgrounds/MetaIsland.astro'
 import Transition2 from '../backgrounds/Transition2.astro'
 import NFT from '../backgrounds/NFT.astro'
 import Roadmap from '../backgrounds/Roadmap.astro'
@@ -14,8 +15,9 @@ import Partners from '../backgrounds/Partners.astro'
   <Header />
 
   <main>
-    <section id="hero">
-      <div>
+    <section class="relative min-h-screen">
+      <MetaIsland />
+      <div class="relative flex min-h-[inherit] flex-row items-center justify-center">
         <h1 class="title w-full text-center font-display">Coming Soon</h1>
       </div>
     </section>

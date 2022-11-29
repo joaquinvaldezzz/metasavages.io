@@ -41,9 +41,6 @@ module.exports = {
           color: theme('colors.white'),
           'background-color': theme('colors.black'),
         },
-        img: {
-          'user-select': 'none',
-        },
       })
     }),
   ],

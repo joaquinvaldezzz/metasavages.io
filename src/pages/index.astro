@@ -2,48 +2,66 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import Header from '../components/Header/Header.astro'
 import MetaIsland from '../backgrounds/MetaIsland.astro'
-import Transition2 from '../backgrounds/Transition2.astro'
-import NFT from '../backgrounds/NFT.astro'
-import Roadmap from '../backgrounds/Roadmap.astro'
-import Transition1 from '../backgrounds/Transition1.astro'
-import Transition3 from '../backgrounds/Transition3.astro'
-import Transition4 from '../backgrounds/Transition4.astro'
-import Partners from '../backgrounds/Partners.astro'
+import Container from '../components/Container.astro'
 ---
 
 <MainLayout name="Meta Savages" suffix="The Web 3.0 tribe for digital entrepreneurs">
   <Header />
 
   <main>
-    <section class="relative min-h-screen">
+    <section class="relative min-h-[1024px] overflow-hidden">
       <MetaIsland />
-      <div class="relative flex min-h-inherit flex-row items-center justify-center">
+      <div class="relative flex min-h-[768px] flex-row items-center justify-center">
         <h1 class="title w-full text-center font-display">Coming Soon</h1>
       </div>
-    </section>
 
-    <section class="relative">
-      <Transition2 />
-    </section>
+      <div class="py-8">
+        <div class="relative mb-8 sm:mb-16">
+          <h1
+            class="text-center font-display text-2xl font-bold text-secondary md:text-3xl lg:text-4xl"
+          >
+            Metasavages Metaverse
+          </h1>
 
-    <section class="relative min-h-screen overflow-hidden" aria-label="NFT">
-      <NFT />
-    </section>
+          <div
+            class="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none"
+          >
+            <div class="relative">
+              <img src="/svg/metasavages-metaverse.svg" alt="" />
+              <div
+                class="absolute right-2.5 -bottom-0.5 font-display text-xl font-bold sm:right-3 sm:bottom-0 sm:text-4xl md:right-4 md:bottom-0.5"
+              >
+                01
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <section class="relative min-h-screen overflow-hidden">
-      <Transition4 />
-    </section>
+        <div
+          class="relative mx-auto grid max-w-screen-md grid-cols-1 gap-4 px-8 lg:max-w-screen-lg lg:grid-cols-2 lg:gap-8"
+        >
+          <div class="text-justify text-lg">
+            <p class="mb-4">
+              Your gateway to the future. Attend epic world-class events, collect NFT's and rewards,
+              explore island's environments and be a part of the tribe. With the help of the
+              revolutionary blockchain technology and the game engine power of Unity, Metasavages
+              have harnessed the potential of web 3.0 which has enabled us to create a secure and
+              immersive platform to create natural human interaction that could be accessed from any
+              device at any time.
+            </p>
+            <p>
+              Framework Your island of adventures Pioneering Learn-To-Earn NFT's and Item Ownership
+              10 playable characters
+            </p>
+          </div>
 
-    <section class="relative min-h-screen overflow-hidden" aria-label="Roadmap">
-      <Roadmap />
-    </section>
-
-    <section class="relative min-h-screen overflow-hidden">
-      <Transition1 />
-    </section>
-
-    <section class="relative min-h-screen overflow-hidden" aria-label="Partners">
-      <Partners />
+          <div>
+            <div class="aspect-h-9 aspect-w-16">
+              <div class="bg-black"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </MainLayout>

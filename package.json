@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "astro": "^1.6.11",
     "astro-purgecss": "^1.3.0",
     "astro-seo-meta": "^1.2.0",

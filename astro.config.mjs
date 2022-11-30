@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config'
-import purgecss from 'astro-purgecss'
+// import purgecss from 'astro-purgecss'
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,21 +30,21 @@ export default defineConfig({
     },
   },
   integrations: [
-    purgecss({
-      content: [
-        './src/backgrounds/**/*.astro',
-        './src/components/**/*.astro',
-        './src/layouts/**/*.astro',
-        './src/pages/**/*.astro',
-        './src/scripts/**/*.js',
-      ],
-      defaultExtractor: (content) => {
-        const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]+/g) || []
-        const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]+/g) || []
-        return broadMatches.concat(innerMatches)
-      },
-      keyframes: true,
-      variables: true,
-    }),
+    // purgecss({
+    //   content: [
+    //     './src/backgrounds/**/*.astro',
+    //     './src/components/**/*.astro',
+    //     './src/layouts/**/*.astro',
+    //     './src/pages/**/*.astro',
+    //     './src/scripts/**/*.js',
+    //   ],
+    //   defaultExtractor: (content) => {
+    //     const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]+/g) || []
+    //     const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]+/g) || []
+    //     return broadMatches.concat(innerMatches)
+    //   },
+    //   keyframes: true,
+    //   variables: true,
+    // }),
   ],
 })

@@ -4,6 +4,7 @@ import Header from '../components/Header/Header.astro'
 import MetaIsland from '../backgrounds/MetaIsland.astro'
 import Transition2 from '../backgrounds/Transition2.astro'
 import NFT from '../backgrounds/NFT.astro'
+import Transition4 from '../backgrounds/Transition4.astro'
 ---
 
 <MainLayout name="Meta Savages" suffix="The Web 3.0 tribe for digital entrepreneurs">
@@ -164,32 +165,69 @@ import NFT from '../backgrounds/NFT.astro'
       <NFT />
       <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
 
-      <div class="relative mx-auto max-w-screen-md px-8 py-16">
-        <div class="relative">
-          <h2
-            class="text-center font-display text-2xl font-bold text-secondary md:text-3xl lg:text-4xl"
-          >
-            NFT Collection
-          </h2>
+      <div class="relative mt-16">
+        <h2
+          class="text-center font-display text-2xl font-bold text-secondary md:text-3xl lg:text-4xl"
+        >
+          NFT Collection
+        </h2>
 
-          <div
-            class="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none"
-          >
-            <div class="relative">
-              <img src="/svg/metasavages-metaverse.svg" alt="" />
-              <div
-                class="absolute right-1.5 -bottom-0.5 font-display text-2xl font-bold sm:right-2.5 sm:bottom-0 sm:text-4xl md:right-3 md:bottom-0.5"
-              >
-                03
-              </div>
+        <div
+          class="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none"
+        >
+          <div class="relative">
+            <img src="/svg/metasavages-metaverse.svg" alt="" />
+            <div
+              class="absolute right-1.5 -bottom-0.5 font-display text-2xl font-bold sm:right-2.5 sm:bottom-0 sm:text-4xl md:right-3 md:bottom-0.5"
+            >
+              03
             </div>
           </div>
         </div>
+      </div>
 
-        <p class="mt-8 text-center text-lg font-semibold sm:mt-12">
+      <div class="relative mx-auto max-w-screen-md px-8 pb-16">
+        <p class="mt-8 text-lg font-semibold sm:mt-12 lg:text-lg">
           The Metasavages collection consist of 10000 uinugely generated characters with 1000
           variations Ofor each one of our 10 badasses. Brutus, Spike and Miku and the rest of the
           gang will serve not only as PFP but also as NFT passes to our Meta Island.
+        </p>
+      </div>
+    </section>
+
+    <section class="relative min-h-screen overflow-hidden">
+      <Transition4 />
+      <div class="absolute inset-0 bg-black/25" aria-hidden="true"></div>
+
+      <div class="relative mt-16">
+        <h2
+          class="text-center font-display text-2xl font-bold text-secondary md:text-3xl lg:text-4xl"
+        >
+          NFT Passes
+        </h2>
+
+        <div
+          class="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none"
+        >
+          <div class="relative">
+            <img src="/svg/map-of-metaverse-island.svg" alt="" />
+            <div
+              class="absolute top-0 left-1.5 font-display text-2xl font-bold sm:top-1 sm:left-2 sm:text-4xl md:top-1.5 md:left-2.5"
+            >
+              04
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto max-w-screen-md px-8 pb-16">
+        <p class="mt-8 font-semibold sm:mt-12 lg:text-lg">
+          Our Metalsland is open to anyone willing to dive in and develop themselves. However,
+          believing in the project and being one of the 10,000 Savages will give you lifetime access
+          to our entire educational platform, events, and airdrops when you own one of our NFTs. and
+          Of course, for those who wish to develop further still, there will also be subscriptions
+          which will enable certain perks and access to most of the amenities across our Metaverse.
+          Are you ready to join the 'tribe?
         </p>
       </div>
     </section>

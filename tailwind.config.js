@@ -1,6 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
-const aspectRatio = require('@tailwindcss/aspect-ratio')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -47,6 +46,5 @@ module.exports = {
         },
       })
     }),
-    aspectRatio,
   ],
 }

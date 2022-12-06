@@ -2,7 +2,8 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import Header from '../components/Header/Header.astro'
 import MetaIsland from '../backgrounds/MetaIsland.astro'
-import Container from '../components/Container.astro'
+import Transition2 from '../backgrounds/Transition2.astro'
+import NFT from '../backgrounds/NFT.astro'
 ---
 
 <MainLayout name="Meta Savages" suffix="The Web 3.0 tribe for digital entrepreneurs">
@@ -77,11 +78,11 @@ import Container from '../components/Container.astro'
         </div>
 
         <div class="relative mt-24">
-          <h1
+          <h2
             class="text-center font-display text-2xl font-bold text-secondary md:text-3xl lg:text-4xl"
           >
             Map of Metaverse Island
-          </h1>
+          </h2>
 
           <div
             class="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none"
@@ -158,6 +159,42 @@ import Container from '../components/Container.astro'
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <Transition2 />
+
+    <section class="relative min-h-screen overflow-hidden">
+      <NFT />
+      <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-screen-md px-8 py-16">
+        <div class="relative">
+          <h2
+            class="text-center font-display text-2xl font-bold text-secondary md:text-3xl lg:text-4xl"
+          >
+            NFT Collection
+          </h2>
+
+          <div
+            class="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none"
+          >
+            <div class="relative">
+              <img src="/svg/metasavages-metaverse.svg" alt="" />
+              <div
+                class="absolute right-1.5 -bottom-0.5 font-display text-2xl font-bold sm:right-2.5 sm:bottom-0 sm:text-4xl md:right-3 md:bottom-0.5"
+              >
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-8 text-center text-lg font-semibold sm:mt-12">
+          The Metasavages collection consist of 10000 uinugely generated characters with 1000
+          variations Ofor each one of our 10 badasses. Brutus, Spike and Miku and the rest of the
+          gang will serve not only as PFP but also as NFT passes to our Meta Island.
+        </p>
       </div>
     </section>
   </main>

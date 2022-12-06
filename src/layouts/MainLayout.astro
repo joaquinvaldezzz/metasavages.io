@@ -1,5 +1,4 @@
 ---
-import { Seo } from 'astro-seo-meta'
 import '../styles/main.scss'
 
 type Props = {
@@ -17,24 +16,6 @@ const title = name + (suffix ? ` - ${suffix}` : '')
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <Seo
-      description="The Web 3.0 tribe for digital entrepreneurs."
-      keywords={['nft', 'meta savages']}
-      icon="/favicon.svg"
-      themeColor="#000"
-      colorScheme="dark"
-      facebook={{
-        image: '/',
-        url: '/',
-        type: 'website',
-      }}
-      twitter={{
-        image: '',
-        site: '@metasavagesnft',
-        card: 'summary',
-      }}
-    />
-    <slot name="seo" />
   </head>
 
   <body class="cursor-default antialiased">

@@ -4,6 +4,7 @@ module.exports = {
   plugins: {
     '@fullhuman/postcss-purgecss': process.env.NODE_ENV === 'production' && {
       content: [
+        './src/backgrounds/**/*.{js,jsx}',
         './src/components/**/*.{js,jsx}',
         './src/layouts/**/*.{js,jsx}',
         './src/pages/**/*.{js,jsx}',

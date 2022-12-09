@@ -2,7 +2,6 @@
   position: relative;
   max-width: theme('maxWidth.2xl');
   margin-right: auto;
-  margin-bottom: theme('margin.8');
   margin-left: auto;
   color: theme('colors.secondary');
   font-weight: theme('fontWeight.bold');
@@ -12,7 +11,6 @@
   text-align: center;
 
   @include sm {
-    margin-bottom: theme('margin.16');
     font-size: theme('fontSize.3xl');
     line-height: theme('fontSize.3xl[1].lineHeight');
   }

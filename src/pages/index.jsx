@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import Title from '../components/Title'
 import Header from '../components/Header'
 import MetaIsland from '../backgrounds/MetaIsland'
+import Transistion1 from '../backgrounds/Transition1'
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         <MetaIsland />
 
         <div className="relative py-8 md:py-12 lg:py-16">
-          <h2 className="heading type-1 mb-8 sm:mb-16" data-number="01">
+          <h2 className="heading type-1" data-number="01">
             Metasavages Metaverse
           </h2>
 
@@ -54,18 +55,18 @@ export default function Home() {
           </div>
 
           <div className="relative mt-24">
-            <h2 className="text-center font-display text-2xl font-bold text-secondary md:text-3xl lg:text-4xl">
+            <h2 className="heading type-2" data-number="02">
               Map of Metaverse Island
             </h2>
 
-            <div className="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none">
+            {/* <div className="pointer-events-none absolute top-1/2 left-1/2 z-10 w-full min-w-[320px] max-w-2xl -translate-x-1/2 -translate-y-1/2 select-none">
               <div className="relative">
                 <img src="/svg/map-of-metaverse-island.svg" alt="" />
                 <div className="absolute top-0 left-1.5 font-display text-2xl font-bold sm:top-1 sm:left-2 sm:text-4xl md:top-1.5 md:left-2.5">
                   02
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="-mx-4 max-w-screen-lg px-8 lg:mx-auto">
@@ -129,6 +130,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Transistion1 />
     </Fragment>
   )
 }

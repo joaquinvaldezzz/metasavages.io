@@ -1,0 +1,65 @@
+.heading {
+  position: relative;
+  max-width: theme('maxWidth.2xl');
+  margin: 0 auto;
+  color: theme('colors.secondary');
+  font-weight: theme('fontWeight.bold');
+  font-size: theme('fontSize.2xl');
+  font-family: theme('fontFamily.display');
+  line-height: theme('fontSize.2xl[1].lineHeight');
+  text-align: center;
+
+  @include sm {
+    font-size: theme('fontSize.3xl');
+    line-height: theme('fontSize.3xl[1].lineHeight');
+  }
+
+  @include lg {
+    font-size: theme('fontSize.4xl');
+    line-height: theme('fontSize.4xl[1].lineHeight');
+  }
+}
+
+.heading.type-1 {
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 100%;
+    min-width: 320px;
+    max-width: theme('maxWidth.2xl');
+    min-height: 160px;
+    background-image: url('/svg/heading-bg-1.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    position: absolute;
+    right: 0.625rem;
+    bottom: -1.25rem;
+    content: attr(data-number);
+    color: theme('colors.white');
+    font-size: theme('fontSize.2xl');
+    line-height: theme('fontSize.2xl[1].lineHeight');
+
+    @include sm {
+      right: 0.85rem;
+      bottom: -2rem;
+      font-size: theme('fontSize.4xl');
+      line-height: theme('fontSize.4xl[1].lineHeight');
+    }
+
+    @include md {
+      right: 1rem;
+      bottom: -2.05rem;
+    }
+
+    @include lg {
+      bottom: -2rem;
+    }
+  }
+}

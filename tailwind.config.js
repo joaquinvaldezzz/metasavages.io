@@ -41,12 +41,10 @@ module.exports = {
     textOpacity: false,
   },
   plugins: [
-    plugin(({ addBase, theme }) => {
+    plugin(({ addBase }) => {
       addBase({
         body: {
           'min-width': '320px',
-          color: theme('colors.white'),
-          'background-color': theme('colors.black'),
         },
       })
     }),

@@ -3,6 +3,7 @@ import Title from '../components/Title'
 import Header from '../components/Header'
 import MetaIsland from '../backgrounds/MetaIsland'
 import Transistion1 from '../backgrounds/Transition1'
+import NFT from '../backgrounds/NFT'
 
 export default function Home() {
   return (
@@ -124,10 +125,20 @@ export default function Home() {
 
       <Transistion1 />
 
-      <section className="relative overflow-hidden">
-        <h2 className="heading type-1" data-number="03">
+      <section className="relative min-h-screen overflow-hidden">
+        <NFT />
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+        <h2 className="heading type-1 mt-16 md:after:!right-3" data-number="03">
           NFT Collection
         </h2>
+
+        <div className="relative mx-auto max-w-screen-md px-8 pb-16">
+          <p className="mt-8 text-lg font-semibold sm:mt-12 lg:text-lg">
+            The Metasavages collection consist of 10000 uinugely generated characters with 1000
+            variations Ofor each one of our 10 badasses. Brutus, Spike and Miku and the rest of the
+            gang will serve not only as PFP but also as NFT passes to our Meta Island.
+          </p>
+        </div>
       </section>
     </Fragment>
   )

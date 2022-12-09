@@ -9,6 +9,10 @@ module.exports = {
     './src/layouts/**/*.astro',
     './src/pages/**/*.astro',
     './src/scripts/**/*.js',
+    // ---
+    './src/components/**/*.{js,jsx}',
+    './src/layouts/**/*.{js,jsx}',
+    './src/pages/**/*.{js,jsx}',
   ],
   theme: {
     container: {

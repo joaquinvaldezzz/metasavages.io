@@ -1,6 +1,6 @@
 # Meta Savages
 
-This project uses [Vite](https://vitejs.dev) for its development environment and [PostCSS](https://github.com/postcss/postcss) for processing CSS.
+This project uses [Next.js](https://nextjs.org/) for its development environment. To run this project locally, follow the instructions below.
 
 ## Run Locally
 

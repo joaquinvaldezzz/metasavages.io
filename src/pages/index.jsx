@@ -2,8 +2,10 @@ import { Fragment } from 'react'
 import Title from '../components/Title'
 import Header from '../components/Header'
 import MetaIsland from '../backgrounds/MetaIsland'
-import Transistion1 from '../backgrounds/Transition1'
-import NFT from '../backgrounds/NFT'
+import Transition1 from '../backgrounds/Transition1'
+import NFTCollection from '../backgrounds/NFTCollection'
+import NFTPasses from '../backgrounds/NFTPasses'
+import NFTComparison from '../backgrounds/NFTComparison'
 
 export default function Home() {
   return (
@@ -123,10 +125,10 @@ export default function Home() {
         </div>
       </section>
 
-      <Transistion1 />
+      <Transition1 />
 
       <section className="relative min-h-screen overflow-hidden">
-        <NFT />
+        <NFTCollection />
         <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
         <h2 className="heading type-1 mt-16 md:after:!right-3" data-number="03">
           NFT Collection
@@ -138,6 +140,29 @@ export default function Home() {
             variations Ofor each one of our 10 badasses. Brutus, Spike and Miku and the rest of the
             gang will serve not only as PFP but also as NFT passes to our Meta Island.
           </p>
+        </div>
+      </section>
+
+      <section className="relative min-h-screen overflow-hidden">
+        <NFTPasses />
+        <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
+        <h2 className="heading type-2 mt-16" data-number="04">
+          NFT Passes
+        </h2>
+      </section>
+
+      <section className="relative min-h-screen overflow-hidden">
+        <NFTComparison />
+        <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
+        <h2 className="heading type-1 mt-16 md:after:!right-3" data-number="05">
+          NFT Comparison
+        </h2>
+        <div className="relative mt-2 flex items-center justify-center gap-2 font-display font-semibold text-secondary sm:mt-4">
+          <div>Access</div>
+          <div className="select-none">/</div>
+          <div>Pass</div>
+          <div className="select-none">/</div>
+          <div>Generic</div>
         </div>
       </section>
     </Fragment>

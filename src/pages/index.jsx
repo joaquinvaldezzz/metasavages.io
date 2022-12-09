@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <Fragment>
       <Title suffix="The Web 3.0 tribe for digital entrepreneurs">Meta Savages</Title>
-
       <Header />
+      <section className="relative min-h-[768px] overflow-hidden lg:min-h-[1024px]" />
     </Fragment>
   )
 }
